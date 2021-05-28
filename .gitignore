@@ -1,0 +1,6 @@
+helm
+*.pkl
+etl_scripts/mlruns/
+deployApi/apiIris/__pycache__/
+deployApi/apiIris/teste/features/steps/__pycache__/
+deployApi/apiIris/model/__pycache__/

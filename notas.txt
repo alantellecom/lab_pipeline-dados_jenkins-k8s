@@ -1,0 +1,7 @@
+kubectl exec --namespace jenkins -it svc/jenkins -c jenkins -- /bin/cat /run/secrets/chart-admin-password && echo
+
+XInmhk4TbgvGbxdTjJWsel
+
+sh "sed -i 's#tag#${env.GIT_COMMIT}#g' deployApi/apiIris/k8s-artifacts/backend.yaml"
+
+

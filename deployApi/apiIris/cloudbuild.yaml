@@ -1,0 +1,9 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--tag=gcr.io/robotic-tide-284315/fastapi-iris:$TAG_NAME', '.']
+images: ['gcr.io/robotic-tide-284315/fastapi-iris:$TAG_NAME']
+
+
+
+
+

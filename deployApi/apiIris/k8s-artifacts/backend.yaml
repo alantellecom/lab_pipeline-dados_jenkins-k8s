@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-production
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      role: api-iris
+      env: production
+  template: 
+    metadata:
+      name: api-iris
+      labels:
+        role: api-iris
+        env: production
+    spec:
+      containers:
+        - name: api
+          image: gcr.io/robotic-tide-284315/fastapi-iris:tag
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 5050
+      imagePullSecrets:
+      - name: gcr-json-key
+      
