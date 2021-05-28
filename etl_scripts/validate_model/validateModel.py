@@ -20,14 +20,6 @@ for model in listModel:
         metrica = data.metrics['accuracy_score']
         modelo = model.artifact_uri 
 
-
-#f = open("scriptDeploy.txt", "a")
-#f.write("accuracy_score: {0}".format(metrica))
-#f.write("""\nmlflow models serve -m {0} -p 1234""".format(modelo[7:] + "/model"))
-#f.write("""\ncurl -X POST -H "Content-Type:application/json; format=pandas-split" --data '{"columns":["sepal_length", "sepal_width", "petal_length", "petal_width"],"data":[[5.6, 2.7, 4.2, 1.3]]}' http://127.0.0.1:1234/invocations""")
-#f.close()
-
-
 os.system("cp {0} {1}".format(modelo[7:] + "/model/model.pkl", 'deployApi/apiIris/model.pkl'))
 
 
